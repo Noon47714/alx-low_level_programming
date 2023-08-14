@@ -25,7 +25,7 @@ int main(void)
 				}
 				else
 				{
-					putchat(',');
+					putchar(',');
 					putchar(' ');
 				}
 			}
