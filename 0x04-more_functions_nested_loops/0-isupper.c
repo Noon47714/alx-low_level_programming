@@ -2,10 +2,11 @@
 
 /**
  * _isupper - check if a letter is upper
+ * @x: The number to be cheched
  * Return: 1 for upper letter or 0 for eny else
  */
 
-int _isupper(int c);
+int _isupper(int x);
 
 {
 	if (x >= 65 && x <= 90)
