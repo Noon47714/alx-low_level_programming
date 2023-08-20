@@ -4,7 +4,7 @@
  * print_alphabet_×10 - function that print the alphabet 10 time
  *
  */
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 
 {
 	int line, ch;
