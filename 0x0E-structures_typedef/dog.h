@@ -2,7 +2,7 @@
 #define DOG_H
 
 /**
- * struct dog - such structure, wow
+ * struct dog - a dog struct
  *  @name: Dog's name
  *  @age: Dog's age
  *  @owner: Dog's owner
@@ -12,7 +12,7 @@
 struct dog
 {
 	char *name;
-	float *age;
+	float age;
 	char *owner;
 };
 
