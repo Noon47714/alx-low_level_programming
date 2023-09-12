@@ -1,11 +1,11 @@
-#ifndef _dog_h_
-#define _dog_h_
+#ifndef DOG_H
+#define DOG_H
 
 /**
  * struct dog - such structure, wow
- *  @name: name
- *  @age: age
- *  @owner: the owner
+ *  @name: Dog's name
+ *  @age: Dog's age
+ *  @owner: Dog's owner
  *
  *  Description: just a lone dog structer in a big kitty world
  */
