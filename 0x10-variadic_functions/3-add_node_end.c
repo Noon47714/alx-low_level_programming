@@ -1,52 +1,39 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
 #include "lists.h"
 
 /**
  * add_node_end - function that adds a new node
  * @head: pointer to singly linked
  * @str: pointer to signly linked
- *
- * str needs to be duplicated.
- * You are allowed to use strdup.
- *
  * Return: The address of the new element or NULL
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node, *last;
-	size_t length = 0;
+	list_t *new, *temp;
+	size_t nchar;
 
 	new_node = malloc(sizeof(list_t));
-	/* if it fails returb NULL */
-	if (new_node == NULL)
+	if (new == NULL)
 		return (NULL);
-	/* loop through the string to find length */
-	while (str[length])
-		length++;
-	/* access the length of new_node and assign it to length */
-	new_node->len = length;
-	/* access the list of new_node and duplicate it */
-	new_node->str = strdup(str);
-	/* if there is no head/linked list make new_node as head */
-	if (*head == NULL)
+
+	new->str = strdup(str);
+
+	for (nchar = 0; str[nchar]; nchar++)
+		;
+
+	new->len = nchar;
+	new->next = NULL;
+	temp = *head;
+
+	if (temp == NULL)
 	{
-		new_node->next = *head; /*this step isn't needed really */
-		*head = new_node;
+		*head = new;
 	}
 	else
 	{
-		/**
-		 * the new node is going to be the last node
-		 */
-		new_node->next = NULL;
-		last = *head;
-		/* traverse till last node */
-		while (last->next)
-			last = last->next;
-		/* change the next of last node */
-		last->next = new_node;
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
 	}
-	return (new_node);
+
+	return (*head);
 }
