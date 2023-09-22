@@ -1,4 +1,6 @@
 #include "lists.h"
+#include <string.h>
+
 /**
  * add_node_end - function that adds a new node
  * @head: pointer to singly linked
@@ -9,8 +11,8 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	char *dup;
 	int len;
-	list_t *new, *last
-		;
+	list_t *new, *last;
+
 	new_node = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
