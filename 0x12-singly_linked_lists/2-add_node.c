@@ -12,7 +12,7 @@ list_t *add_node(list_t **head, const char *str)
 {
 	char *dup;
 	int len;
-	list_t *new, *last;
+	list_t *new;
 
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
@@ -29,18 +29,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	new->str = dup;
 	new->len = len;
-	new->next = NULL;
+	new->next = *head;
 
-	if (*head == NULL)
-		*head = new;
+	*head = new;
 
-	else
-	{
-		last = *head;
-		while (last->next != NULL)
-			last = last->next;
-		last->next = new;
-	}
-
-	return (*head);
+	return (new);
 }
