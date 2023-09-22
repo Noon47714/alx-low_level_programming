@@ -28,16 +28,16 @@ void print_all(const char * const format, ...)
 		}
 		switch (format[n])
 		{
-			case'c';
+			case 'c':
 			printf("%c%s", va_arg(valist, int), sep);
 			break;
-			case 'i';
+			case 'i':
 			printf("%d%s", va_arg(valist, int), sep);
 			break;
-			case 'f';
+			case 'f':
 			printf("%f%s", va_arg(valist, double), sep);
 			break;
-			case 's';
+			case 's':
 			str = va_arg(valist, char *);
 			if (str == NULL)
 				str = "(nil)";
