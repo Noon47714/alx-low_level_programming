@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
@@ -6,6 +7,7 @@
  * @name: dog's name
  * @age: dog's age
  * @owner: dog's owner
+ *
  * Return: pointer to the structure
  */
 dog_t *new_dog(char *name, float age, char *owner)
@@ -14,6 +16,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *p;
 
 	p = malloc(sizeof(dog_t));
+	
 	if (p == NULL)
 	{
 		free(p);
@@ -42,5 +45,5 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 	p->owner[k] = '\0';
 	p->age = age;
-	return (0);
+	return (p);
 }
