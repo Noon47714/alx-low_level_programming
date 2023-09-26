@@ -2,6 +2,7 @@
 
 /**
  * _calloc - allocate memory using malloc
+ * @nmemb: number of elements
  * @size: size of the memory block
  * Return: poiner to the address of the memory block
  */
