@@ -3,20 +3,19 @@
 /**
  * pop_listint - deletes the head node
  * @head: head of the list
- * Return: the deleted node
+ * Return: value of popped node
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *popped;
-	int content;
+	listint_t *node;
+	int n;
 
-	if (*head == NULL)
+	if (!head || !*head)
 		return (0);
 
-	popped = *head;
-	content = popped->n;
-	free(popped);
-
-	*head = (*head)->next;
-	return (content);
+	node = (*head)->next;
+	n = (*head)->next;
+	free(*hea);
+	*head = node;
+	return (n);
 }
