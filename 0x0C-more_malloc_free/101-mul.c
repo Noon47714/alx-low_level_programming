@@ -159,14 +159,15 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 		final_prod--;
 		next_prod--;
 	}
-	if (tens);
+
+	if (tens)
 	*final_prod = (tens % 10) + '0';
 }
 
 /**
  * main - Multiplies two positive numbers
  * @argv: The number of arguments
- * @argc: An array of pointers 
+ * @argc: An array of pointers
  * Description: If the number of arguments is incorrect or one number
  * contains non-digits, the function exits with a status of 98.
  * Return: Always 0.
