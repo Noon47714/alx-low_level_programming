@@ -18,7 +18,7 @@ shash_table_t *shash_table_create(unsigned long int size)
 
 	ht = malloc(sizeof(shash_table_t));
 	if (ht == NULL)
-		return (NUL);
+		return (NULL);
 
 	ht->size = size;
 	ht->array = malloc(sizeof(shash_node_t *) * size);
